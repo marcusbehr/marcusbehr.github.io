@@ -1,25 +1,56 @@
 import logo from './logo.svg';
 import './App.css';
+import Numeric  from './Numeric.js';
+import Direction from './Direction.js';
+import { Component, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      content:null,
+      directionalActive:false,
+      numeralsActive:false
+    }
+
+    this.handleDirectionalClick = this.handleDirectionalClick.bind(this)
+    this.handleNumeralsClick = this.handleNumeralsClick.bind(this)
+   
+}
+
+
+
+handleNumeralsClick() {
+  this.setState({numeralsActive: true});
+  this.setState({directionalActive: false});
+}
+
+handleDirectionalClick() {
+  this.setState({numeralsActive: false});
+  this.setState({directionalActive: true});
+}
+
+
+
+render() {return (
+  <div className="App">
+    <button onClick={this.handleNumeralsClick}>
+      Odd/Even integers
+    </button>
+    <br/>
+    <button onClick={this.handleDirectionalClick}>
+      Directional commands
+    </button>
+
+    {this.state.numeralsActive? <Numeric />: null }
+    {this.state.directionalActive? <Direction />: null }
+
+ 
+  
+  </div>
+  
+);}  
 }
 
 export default App;
