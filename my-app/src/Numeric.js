@@ -13,7 +13,7 @@ class Numeric extends Component {
   
 
   startNumericExercise() {
-    this.setState({number: Math.floor(Math.random() * (99 - 1+ 1)) + 1})
+    this.setState({number: Math.floor(Math.random() * (99 - 1+ 1)) + 1}) //Math.floor(Math.random() * (max - min + 1)) + min; 
   }
   
   
