@@ -10,6 +10,13 @@ const Speech = (props) => {
     
    }, [props.directionCount]);
 
+   useEffect(() => {
+    if (props.numberToSpeech > 0 ){
+        speak({ text: props.numberToSpeech})
+    }
+    
+   }, [props.numberToSpeech]);
+
 
     const { speak } = useSpeechSynthesis();
     return (
