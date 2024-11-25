@@ -35,16 +35,19 @@ handleDirectionalClick() {
 
 render() {return (
   <div className="App">
-    <button onClick={this.handleNumeralsClick}>
-      Odd/Even integers
-    </button>
-    <br/>
-    <button onClick={this.handleDirectionalClick}>
-      Directional commands
-    </button>
+    <div class="center">
+      <button class="select-exercise-button" onClick={this.handleNumeralsClick}>
+        Odd/Even integers
+      </button>
+      <br/>
+      <button class="select-exercise-button" onClick={this.handleDirectionalClick}>
+        Directional commands
+      </button>
 
-    {this.state.numeralsActive? <Numeric />: null }
-    {this.state.directionalActive? <Direction />: null }
+      {this.state.numeralsActive? <Numeric />: null }
+      {this.state.directionalActive? <Direction />: null }
+    </div>
+
 
  
   
