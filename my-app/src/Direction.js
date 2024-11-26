@@ -9,7 +9,8 @@ class Direction extends Component {
        direction: null,
        directions: ['Forward', 'Backward', 'Left', 'Right'],
        directionCount: 0,
-       time: 0
+       time: 0,
+       exerciseActive: false
       }
 
       this.startDirectionExercise = this.startDirectionExercise.bind(this);
@@ -40,7 +41,7 @@ class Direction extends Component {
   
   render() {return (
     <div className="Direction">
-     <button onClick={this.startDirectionExercise}>
+     <button className="exercise-begin-button" onClick={this.startDirectionExercise}>
       Begin 
     </button>
     

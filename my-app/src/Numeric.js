@@ -9,7 +9,8 @@ class Numeric extends Component {
       this.state = {
        number: null,
        numberCount: 0,
-       time: 0
+       time: 0,
+       exerciseActive: false
       }
 
       this.startNumericExercise = this.startNumericExercise.bind(this);
@@ -22,27 +23,35 @@ class Numeric extends Component {
   }
   
   startNumericExercise(){
-    var rand = Math.round(Math.random() * (3000 - 500)) + 500; //Math.round(Math.random() * (3000 - 500)) + 500;
+    var rand = Math.floor(Math.random() * (3000 - 1000 )) + 1000 ; //Math.round(Math.random() * (3000 - 500)) + 500;
     //can set time to be edited in UI in future updated
     this.setState({time: this.state.time + rand});
+    this.setState({exerciseActive: true});
 
     if (this.state.time < 30000){
       setTimeout(function() {
         this.generateNumber();
         this.startNumericExercise();
-      }.bind(this), rand)
-    }
 
-   //null out number when exrecise is done. may need to split into other method
+        //some check here for time
+
+      }.bind(this), rand)
+    } else {
+      this.setState({time: 0});
+      this.setState({exerciseActive: false});
+      this.setState({number: null});
+    }
   }
+
+  
   
   render() {return (
     <div className="Direction">
-     <button onClick={this.startNumericExercise}>
+     {!this.state.exerciseActive && <button className="exercise-begin-button center-screen" onClick={this.startNumericExercise}>
       Begin 
-    </button>
+    </button>}
     
-    <div>{this.state.number}</div>
+    { this.state.exerciseActive && <div className="exercise-display center-screen">{this.state.number}</div>}
 
     <div className='speech'>
         <Speech numberToSpeech={this.state.number} numberCount={this.state.numberCount}/ >
