@@ -46,8 +46,8 @@ class Numeric extends Component {
   
   
   render() {return (
-    <div className="Direction">
-     {!this.state.exerciseActive && <button className="exercise-begin-button center-screen" onClick={this.startNumericExercise}>
+    <div className="Number">
+     {!this.state.exerciseActive && <button className="exercise-begin-button " onClick={this.startNumericExercise}>
       Begin 
     </button>}
     
