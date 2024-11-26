@@ -1,27 +1,27 @@
 :root {
-  background-color: #282c34;
+  background-color: #27374D;
 }
 
 .select-exercise-button {
   margin-top: 50px;
   height: 200px;
   width: 80vw;
-  background-color: blue;
-  color: #FFFFFF;
+  background-color:#526D82;
+  color: #DDE6ED;
 }
 
 .exercise-begin-button {
   margin-top: 50px;
   height: 200px;
   width: 98%;
-  background-color: blue;
+  background-color: #526D82;
   color: #FFFFFF;
   width: 80vw;
 }
 
 .exercise-display {
   font-size: 200px;
-  color: #FFFFFF;
+  color: #DDE6ED;
 }
 
 .center-screen{
