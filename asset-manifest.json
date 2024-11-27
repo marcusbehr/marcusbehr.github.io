@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/marcusbehr.github.io/static/css/main.0a1054ff.css",
-    "main.js": "/marcusbehr.github.io/static/js/main.b1574f9f.js",
-    "static/js/453.ed3810f9.chunk.js": "/marcusbehr.github.io/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/marcusbehr.github.io/index.html",
-    "main.0a1054ff.css.map": "/marcusbehr.github.io/static/css/main.0a1054ff.css.map",
-    "main.b1574f9f.js.map": "/marcusbehr.github.io/static/js/main.b1574f9f.js.map",
-    "453.ed3810f9.chunk.js.map": "/marcusbehr.github.io/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/pt-assistant-new/static/css/main.0a1054ff.css",
+    "main.js": "/pt-assistant-new/static/js/main.f0ee1b65.js",
+    "static/js/453.ed3810f9.chunk.js": "/pt-assistant-new/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/pt-assistant-new/index.html",
+    "main.0a1054ff.css.map": "/pt-assistant-new/static/css/main.0a1054ff.css.map",
+    "main.f0ee1b65.js.map": "/pt-assistant-new/static/js/main.f0ee1b65.js.map",
+    "453.ed3810f9.chunk.js.map": "/pt-assistant-new/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a1054ff.css",
-    "static/js/main.b1574f9f.js"
+    "static/js/main.f0ee1b65.js"
   ]
 }
